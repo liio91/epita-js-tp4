@@ -1,0 +1,51 @@
+{
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "./node_modules/.bin/webpack-dev-server --config ./config/webpack/server.js --hot",
+    "build": "./node_modules/.bin/webpack --config ./config/webpack/build.js"
+  },
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-react": "^6.24.1",
+    "webpack": "^4.33.0",
+    "webpack-cli": "^3.3.3"
+  },
+  "dependencies": {
+    "@babel/core": "^7.4.5",
+    "babel-core": "^6.26.3",
+    "babel-loader": "7.1.5",
+    "file-loader": "^4.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.7.0",
+    "react": "16.2.0",
+    "react-dom": "16.2.0",
+    "react-hot-loader": "^4.11.0",
+    "react-redux": "5.0.6",
+    "redux": "^4.0.1",
+    "webpack-dev-server": "^3.7.1",
+    "webpack-merge": "^4.2.1"
+  },
+  "babel": {
+    "presets": [
+      "react",
+      [
+        "env",
+        {
+          "targets": {
+            "browsers": [
+              "last 2 versions"
+            ]
+          },
+          "modules": false
+        }
+      ]
+    ],
+    "plugins": [
+      "react-hot-loader/babel"
+    ]
+  }
+}
